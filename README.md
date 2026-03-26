@@ -249,12 +249,10 @@ STRIPE_WEBHOOK_SECRET=whsec_...
 - [x] Páginas de login, registro e recuperação de senha
 - [x] Dashboard principal com dados reais da API
 - [x] Rota `/dashboard/resumo` no backend
-
-### 🔜 Em desenvolvimento
-- [ ] Página Financeiro (lançamentos e relatórios)
-- [ ] Página Alunos (gestão de mentorados)
-- [ ] Página MEI (DAS, faturamento e alertas)
-- [ ] Página Configurações (perfil e conta)
+- [x] Página Financeiro (lançamentos e relatórios)
+- [x] Página Alunos (gestão de mentorados)
+- [x] Página MEI (DAS, faturamento e alertas)
+- [x] Página Configurações (perfil e conta)
 
 ### 🔮 Futuro
 - [ ] Restrições por plano (Free, Basic, Premium)
@@ -263,6 +261,32 @@ STRIPE_WEBHOOK_SECRET=whsec_...
 - [ ] Integração com Hotmart, Kiwify e YouTube via API
 - [ ] Migração para PostgreSQL em produção
 - [ ] Deploy (Railway, Vercel, AWS)
+---
+
+## 🛡️ Hardening e Segurança (antes de publicar)
+
+Este projeto é ilustrativo para portfólio. Para reduzir riscos, siga este checklist:
+
+- Nunca suba `.env`, banco local (`*.db`) ou qualquer chave real.
+- Troque (rotate) qualquer chave já utilizada em testes públicos.
+- Em produção, configure `APP_ENV=production` para desativar `/docs`, `/redoc` e OpenAPI pública.
+- Defina `CORS_ORIGINS` apenas com o domínio real do frontend (evite curinga).
+- Use `SECRET_KEY` forte (>= 32 caracteres) e única por ambiente.
+- Mantenha `SQL_ECHO=false` fora de desenvolvimento para não vazar dados em logs.
+- Utilize apenas dados fictícios no deploy de portfólio.
+- Ative Secret Scanning e Dependabot no GitHub.
+
+### Exemplo de variáveis seguras (produção)
+
+```env
+APP_ENV=production
+DATABASE_URL=sqlite:///./saas.db
+SECRET_KEY=gere-uma-chave-grande-e-aleatoria-com-mais-de-32-caracteres
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+SQL_ECHO=false
+CORS_ORIGINS=https://seu-frontend.com
+```
+
 
 ---
 
@@ -299,7 +323,7 @@ STRIPE_WEBHOOK_SECRET=whsec_...
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Victor Maine**
+Desenvolvido por **Victor Toledo**
 
 ---
 
