@@ -131,7 +131,7 @@ export default function Login() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="seu@email.com"
                   required
-                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 outline-none transition-all text-sm"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 outline-none transition-all text-sm bg-white text-gray-900 placeholder:text-gray-400"
                   onFocus={(e) => e.target.style.borderColor = '#00d4aa'}
                   onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
                 />
@@ -150,7 +150,7 @@ export default function Login() {
                   onChange={(e) => setSenha(e.target.value)}
                   placeholder="••••••••"
                   required
-                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 outline-none transition-all text-sm"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 outline-none transition-all text-sm bg-white text-gray-900 placeholder:text-gray-400"
                   onFocus={(e) => e.target.style.borderColor = '#00d4aa'}
                   onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
                 />
