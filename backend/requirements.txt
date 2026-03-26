@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+sqlmodel
+python-dotenv
+python-jose
+passlib[bcrypt]
+stripe
+python-multipart
